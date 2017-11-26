@@ -1,4 +1,4 @@
-@Grab("thymeleaf-spring4")
+//@Grab("thymeleaf-spring4")
 
 @Controller
 class App {
