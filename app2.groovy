@@ -8,7 +8,7 @@ class App {
 	def home(ModelAndView mav) {
 		mav.setViewName("home")
 		//mav.addObject("msg", "Hello! this is sample page.")
-		mav.addObject("msg", "안녕하세요?")
+		mav.addObject("msg", "\uc548\ub155\ud558\uc138\uc694?")
 		mav
 	}
 }
