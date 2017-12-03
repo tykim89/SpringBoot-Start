@@ -16,8 +16,8 @@ public class HelloController {
 	}
 	
 	@RequestMapping("/other")
-	public String other(){
-		return "redirect:/";
+	public ModelAndView other(){
+		return new ModelAndView("redirect:/");
 	}
 	
 	@RequestMapping("/home")
