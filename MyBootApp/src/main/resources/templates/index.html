@@ -19,9 +19,6 @@
 </head>
 <body>
 	<h1>Hello page</h1>
-	<p th:text="${new java.util.Date().toString()}" />
-	<p th:text="${#dates.format(new java.util.Date(), 'dd/MMM/yyyy HH:mm')}" />
-	<p th:text="${#numbers.formatInteger(1234, 7)}" />
-	<p th:text="${#strings.toUpperCase('welcome to Spring.')}" />	
+	<p th:text=" 'from parameter... id=' + ${param.id[0]} + ', name=' + ${param.name[0]} " />
 </body>
 </html>
