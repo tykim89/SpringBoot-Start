@@ -19,6 +19,6 @@
 </head>
 <body>
 	<h1 th:text="#{content.title}">Hello page</h1>
-	<p th:text="#{content.message}" />
+	<p><a th:href="@{/home/{id}(id=${param.id[0]})}"> link </a></p>
 </body>
 </html>
