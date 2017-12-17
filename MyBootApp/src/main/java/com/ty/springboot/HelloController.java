@@ -10,16 +10,9 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class HelloController {
 
-	@RequestMapping(value="/{num}")
-	public ModelAndView index(@PathVariable int num, ModelAndView mav){
+	@RequestMapping(value="/")
+	public ModelAndView index(ModelAndView mav){
 		mav.setViewName("index");
-		mav.addObject("num", num);
-		
-		if(num >= 0){
-			mav.addObject("check", "num >= data.size() ? 0 : num");
-		}else{
-			mav.addObject("check", "num <= data.size()*-1 ? 0 : num*-1");
-		}
 		
 		ArrayList<DataObject> data = new ArrayList<DataObject>();
 		data.add(new DataObject(0, "park", "park@yamada"));
