@@ -1,22 +1,22 @@
 package com.ty.springboot;
 
+import java.util.ArrayList;
+
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HelloController {
 
-	@RequestMapping(value="/{month}")
-	public ModelAndView index(@PathVariable int month, ModelAndView mav){
+	@RequestMapping(value="/")
+	public ModelAndView index(ModelAndView mav){
 		mav.setViewName("index");
-		int m = Math.abs(month) % 12;
-		m = m == 0 ? 12 : m;
-		mav.addObject("month", m);
-		mav.addObject("check", Math.floor(m/3));
+		ArrayList<String[]> data = new ArrayList<String[]>();
+		data.add(new String[]{"park", "park@yamada", "090-999-999"});
+		data.add(new String[]{"lee", "lee@flower", "010-111-1111"});
+		data.add(new String[]{"choi", "choi@sony", "055-555-555"});
+		mav.addObject("data", data);
 		return mav;
 	}
 
