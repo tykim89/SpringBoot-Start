@@ -12,14 +12,12 @@ public class HelloController {
 	@RequestMapping(value="/")
 	public ModelAndView index(ModelAndView mav){
 		mav.setViewName("index");
-		mav.addObject("msg", "current data.");
-		DataObject obj = new DataObject(123, "tykim", "ty_1109.kim@samsung.com");
-		mav.addObject("object", obj);
+		mav.addObject("msg", "message 1<hr/>message 2<br/>message 3");
 		return mav;
 	}
 
 	
-	class DataObject {
+/*	class DataObject {
 	    private int id;
 	    private String name;
 	    private String value;
@@ -54,5 +52,5 @@ public class HelloController {
 	        this.value = value;
 	    }
 	}
-
+*/
 }
